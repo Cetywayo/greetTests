@@ -24,9 +24,6 @@ function greetMe(existingNames) {
         else {
             return("Enter alphabet only");
            
-        //    alert ("input alphabet only")
-        
-           
         
         } 
 
