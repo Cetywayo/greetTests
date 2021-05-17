@@ -8,6 +8,14 @@ describe('greet the name with the selected language', function(){
        
    });
 
+
+   it('should  greet the Musa in xhosa', function(){
+    greetNames = greetMe();
+   
+    assert.equal('Molo, Musa', greetNames.enterTheName('isixhosa','Musa'));
+        
+    });
+
   
    it('should  greet the name in english', function(){
     greetNames = greetMe();
@@ -16,12 +24,26 @@ describe('greet the name with the selected language', function(){
         
     });
 
+    it('should  greet the Oyi in english', function(){
+        greetNames = greetMe();
+       
+        assert.equal('Hello, Oyi', greetNames.enterTheName('english','Oyi'));
+            
+        });
+
     it('should  greet the name in afrikaans', function(){
         greetNames = greetMe();
        
         assert.equal('Hallo, Siwe', greetNames.enterTheName('afrikaans','Siwe'));
             
         });
+
+        it('should  greet the Makhe in afrikaans', function(){
+            greetNames = greetMe();
+           
+            assert.equal('Hallo, Makhe', greetNames.enterTheName('afrikaans','Makhe'));
+                
+            });
       
         it('should return list of greeted names', function(){
             greetNames = greetMe();
@@ -34,6 +56,7 @@ describe('greet the name with the selected language', function(){
             assert.deepEqual([ 'Siwe', 'Musa', 'Oyena', 'Masa' ] ,greetNames.displayNamesGreeted());
                 
             });
+            
 
 
         it('should return the length of the array', function(){
@@ -50,5 +73,6 @@ describe('greet the name with the selected language', function(){
                 
             });
   
+
 });
 
