@@ -31,6 +31,13 @@ describe('greet the name with the selected language', function(){
             
         });
 
+        it('should  return error message', function(){
+            greetNames = greetMe();
+           
+            assert.equal('Enter alphabet only', greetNames.enterTheName('english','O12345yi'));
+                
+            });
+
     it('should  greet the name in afrikaans', function(){
         greetNames = greetMe();
        
@@ -38,12 +45,26 @@ describe('greet the name with the selected language', function(){
             
         });
 
+        it('should  return error message', function(){
+            greetNames = greetMe();
+           
+            assert.equal('Enter alphabet only', greetNames.enterTheName('afrikaans','-Siwe'));
+                
+            });
+
         it('should  greet the Makhe in afrikaans', function(){
             greetNames = greetMe();
            
             assert.equal('Hallo, Makhe', greetNames.enterTheName('afrikaans','Makhe'));
                 
             });
+
+            it('should  return error message', function(){
+                greetNames = greetMe();
+               
+                assert.equal('Enter alphabet only', greetNames.enterTheName('afrikaans','Makhe123'));
+                    
+                });
       
         it('should return list of greeted names', function(){
             greetNames = greetMe();
